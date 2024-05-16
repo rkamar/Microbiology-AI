@@ -181,7 +181,7 @@ dash==2.9.3
 dash-bootstrap-components
 requests
 phi-tools
-
+gunicorn
 
 urllib3==2.2.1
     # via requests
