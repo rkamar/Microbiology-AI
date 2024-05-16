@@ -67,7 +67,7 @@ app.layout = dbc.Container([
                 id='topic-input',
                 type='text',
                 placeholder='Enter a topic',
-                value='Ask here...',
+                value='',
                 style={'width': '100%', 'marginBottom': '20px'}
             ), width=6
         ),
