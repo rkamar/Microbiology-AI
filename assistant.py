@@ -28,6 +28,7 @@ def get_research_assistant(
         - **Importance** Why is this topic significant now?
         - **History** History of this topic.
         - **News** Recent developments in this topic, from top newspapers.
+        - **Implications:** What these findings mean for the future.
 
         ### 1:
         - **Detail 1**
@@ -44,19 +45,8 @@ def get_research_assistant(
         - **Detail 2**
         - **Detail 3**
 
-        ### 4:
-        - **Detail 1**
-        - **Detail 2**
-        - **Detail 3**
-
-        ### 5:
-        - **Detail 1**
-        - **Detail 2**
-        - **Detail 3**
-
         ## Conclusion
         - **Summary of report:** Recap of the key findings from the report.
-        - **Implications:** What these findings mean for the future.
 
         ## References
         - [Reference 1](Link to Source)
