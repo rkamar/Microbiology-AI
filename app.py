@@ -59,7 +59,7 @@ app.layout = dbc.Container([
         dbc.Col(html.H1("Microbiology AI", style=app_title_style), width=12),
     ]),
     dbc.Row([
-        dbc.Col(html.H5("Created by Ristha Kamar, BRC-D131, Qatar University", style=app_subtitle_style), width=12),
+        dbc.Col(html.H5("Created by Ristha Kamar [BRC-D131, Qatar University]", style=app_subtitle_style), width=12),
     ]),
     dbc.Row([
         dbc.Col(dcc.Markdown(id='report-output', style=app_container_style), width=12),
@@ -84,7 +84,7 @@ app.layout = dbc.Container([
                 id='topic-input',
                 type='text',
                 placeholder='Enter a topic',
-                value='Microbiology AI advancements',
+                value='Ask any questions for Advanced Microbiology Researchers',
                 style={'width': '100%', 'marginBottom': '20px'}
             ), width=6
         ),
