@@ -53,9 +53,9 @@ app.layout = dbc.Container([
     ]),
     dbc.Row([
         dbc.Col(html.H5([
-            "Python coded by Ristha Kamar",
+            "Python code by Ristha Kamar - D131",
             html.Br(),
-            "Biomedical Research Center | D-131 | Qatar University"
+            "Biomedical Research Center | Qatar University"
         ], style=app_subtitle_style), width=12),
     ]),
     dbc.Row([
