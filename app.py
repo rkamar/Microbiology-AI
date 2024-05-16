@@ -53,7 +53,7 @@ app.layout = dbc.Container([
     ]),
     dbc.Row([
         dbc.Col(html.H5([
-            "Created by Ristha Kamar",
+            "Python coded by Ristha Kamar",
             html.Br(),
             "BRC-D131, Qatar University"
         ], style=app_subtitle_style), width=12),
@@ -67,7 +67,7 @@ app.layout = dbc.Container([
                 id='topic-input',
                 type='text',
                 placeholder='Enter a topic',
-                value='Microbiology AI advancements',
+                value='Ask any advanced microbiology question',
                 style={'width': '100%', 'marginBottom': '20px'}
             ), width=6
         ),
