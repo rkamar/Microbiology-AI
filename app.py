@@ -47,44 +47,27 @@ button_style = {
     'marginBottom': '10px'
 }
 
-center_style = {
-    'display': 'flex',
-    'justifyContent': 'center',
-    'alignItems': 'center',
-    'flexDirection': 'column'
-}
-
 app.layout = dbc.Container([
     dbc.Row([
         dbc.Col(html.H1("Microbiology AI", style=app_title_style), width=12),
     ]),
     dbc.Row([
-        dbc.Col(html.H5("Created by Ristha Kamar [BRC-D131, Qatar University]", style=app_subtitle_style), width=12),
+        dbc.Col(html.H5([
+            "Created by Ristha Kamar",
+            html.Br(),
+            "BRC-D131, Qatar University"
+        ], style=app_subtitle_style), width=12),
     ]),
     dbc.Row([
         dbc.Col(dcc.Markdown(id='report-output', style=app_container_style), width=12),
     ]),
     dbc.Row([
         dbc.Col(
-            dcc.Dropdown(
-                id='model-dropdown',
-                options=[
-                    {'label': 'llama3-70b-8192', 'value': 'llama3-70b-8192'},
-                    {'label': 'llama3-8b-8192', 'value': 'llama3-8b-8192'},
-                    {'label': 'mixtral-8x7b-32768', 'value': 'mixtral-8x7b-32768'}
-                ],
-                value='llama3-70b-8192',
-                clearable=False
-            ), width=6, style={'marginBottom': '20px'}
-        ),
-    ], justify='center'),
-    dbc.Row([
-        dbc.Col(
             dcc.Input(
                 id='topic-input',
                 type='text',
                 placeholder='Enter a topic',
-                value='Ask any questions for Advanced Microbiology Researchers',
+                value='Microbiology AI advancements',
                 style={'width': '100%', 'marginBottom': '20px'}
             ), width=6
         ),
@@ -107,11 +90,10 @@ app.layout = dbc.Container([
     Output('report-output', 'children'),
     Input('generate-button', 'n_clicks'),
     Input('restart-button', 'n_clicks'),
-    State('model-dropdown', 'value'),
     State('topic-input', 'value'),
     prevent_initial_call=True
 )
-def generate_report(n_clicks_generate, n_clicks_restart, model, topic):
+def generate_report(n_clicks_generate, n_clicks_restart, topic):
     ctx = dash.callback_context
 
     if not ctx.triggered:
@@ -121,6 +103,8 @@ def generate_report(n_clicks_generate, n_clicks_restart, model, topic):
 
     if button_id == 'restart-button':
         return ''
+
+    model = 'llama3-70b-8192'  # Default model
 
     # Use TavilyTools to perform web search with API key
     tavily_tools = TavilyTools(api_key=TAVILY_API_KEY)
@@ -139,4 +123,3 @@ def generate_report(n_clicks_generate, n_clicks_restart, model, topic):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
-
