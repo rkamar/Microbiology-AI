@@ -18,7 +18,7 @@ def get_research_assistant(
             "Carefully read the results and generate a report.",
             "Make your report with ample numbers and statistics.",
             "Your report should follow the format provided below."
-            "Remember: IEEE style (eg: [13] ) referencing required.",
+            "Remember: IEEE style, eg: [13], referencing required.",
         ],
         add_to_system_prompt=dedent("""
         <report_format>
