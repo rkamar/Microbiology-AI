@@ -18,17 +18,15 @@ def get_research_assistant(
             "Carefully read the results and generate a report.",
             "Make your report with ample numbers and statistics.",
             "Your report should follow the format provided below."
-            "Remember: IEEE style referencing required (eg: [1]).",
+            "Remember: IEEE style (eg: [13] ) referencing required.",
         ],
         add_to_system_prompt=dedent("""
         <report_format>
         ## Title
 
         - **Overview** Brief introduction of the topic.
-        - **Importance** Why is this topic significant now?
-        - **History** History of this topic.
-        - **News** Recent developments in this topic, from top newspapers.
-        - **Implications:** What these findings mean for the future.
+        - **History** History, ongoing and upcoming research on this topic.
+        - **Statistics** Everything Statistically significant to this question?
 
         ### 1:
         - **Detail 1**
