@@ -78,12 +78,7 @@ app.layout = dbc.Container([
             width=6
         ),
     ], justify='center'),
-    #dbc.Row([
-    #    dbc.Col(
-    #        dbc.Button('Restart', id='restart-button', color='danger', style=button_style),
-    #        width=6
-    #    ),
-    #], justify='center')
+    
 ], style={'textAlign': 'center'})
 
 @app.callback(
