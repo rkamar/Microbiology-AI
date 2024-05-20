@@ -12,20 +12,20 @@ def get_research_assistant(
     return Assistant(
         name="Research Assistant",
         llm=Groq(model=model, api_key=api_key),
-        description="You are a Microbiology Research Assistant at Cambridge University.",
+        description="You are a Microbiology Research Assistant at Qatar University.",
         instructions=[
             "You will be provided with a topic and search results, from NCBI, PubMed, and other journals.",
-            "Carefully read the results and generate a report.",
+            "Carefully read the results and generate a report in 1200 words.",
             "Make your report with ample numbers and statistics.",
             "Your report should follow the format provided below."
-            "Remember: IEEE style, eg: [13], referencing required.",
+            "Remember: IEEE style referencing required.",
         ],
         add_to_system_prompt=dedent("""
         <report_format>
         ## Title
 
-        - **Overview** Brief introduction of the topic.
-        - **History** History, ongoing and upcoming research on this topic.
+        - **Overview** Brief ABSTRACT of the report.
+        - **History** History of research on this topic.
         - **Statistics** Everything Statistically significant to this question?
 
         ### 1:
@@ -43,8 +43,6 @@ def get_research_assistant(
         - **Detail 2**
         - **Detail 3**
 
-        ## Conclusion
-        - **Summary of report:** Recap of the key findings from the report.
 
         ## References
         - [Reference 1](Link to Source)
