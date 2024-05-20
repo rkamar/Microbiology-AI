@@ -66,7 +66,7 @@ app.layout = dbc.Container([
             dcc.Input(
                 id='topic-input',
                 type='text',
-                placeholder='Enter a topic',
+                placeholder='Ask a long question',
                 value='',
                 style={'width': '100%', 'marginBottom': '20px'}
             ), width=6
@@ -78,12 +78,12 @@ app.layout = dbc.Container([
             width=6
         ),
     ], justify='center'),
-    dbc.Row([
-        dbc.Col(
-            dbc.Button('Restart', id='restart-button', color='danger', style=button_style),
-            width=6
-        ),
-    ], justify='center')
+    #dbc.Row([
+    #    dbc.Col(
+    #        dbc.Button('Restart', id='restart-button', color='danger', style=button_style),
+    #        width=6
+    #    ),
+    #], justify='center')
 ], style={'textAlign': 'center'})
 
 @app.callback(
