@@ -26,8 +26,9 @@ def get_research_assistant(
 
         - **Introduction** Very brief introduction.
         - **Discussion** Comparison with previous studies and Implications of the findings. 
-        - **Statistics** Everything Statistically significant to this question?
-        - **Results** Use figures to present the core findings to the title or querry.
+        - **Results** Present the core findings to the question.
+        - **Statistics** Everything Statistically significant to this question.
+
         ### 1:
         - **Detail 1**
         - **Detail 2**
