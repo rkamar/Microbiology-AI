@@ -18,7 +18,7 @@ def get_research_assistant(
             "Carefully read the results and generate an ACADEMIC report.",
             "Make your academic report with ample statistics.",
             "Your report should follow the format provided below."
-            "Remember: IEEE style ([13]) referencing required.",
+            "Remember: Format all citations and references in IEEE style, using square brackets for in-text citations. ",
         ],
         add_to_system_prompt=dedent("""
         <report_format>
