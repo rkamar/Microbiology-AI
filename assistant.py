@@ -24,8 +24,7 @@ def get_research_assistant(
         <report_format>
         ## Title (academic language)
 
-        - **Abstract (brief)** Brief ABSTRACT of the report.
-        - **History** History of research on this topic.
+        - **Introduction** Introduction and interdisciplinary connections of this report.
         - **Statistics** Everything Statistically significant to this question?
 
         ### 1:
