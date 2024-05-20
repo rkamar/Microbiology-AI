@@ -12,21 +12,22 @@ def get_research_assistant(
     return Assistant(
         name="Research Assistant",
         llm=Groq(model=model, api_key=api_key),
-        description="You are a Microbiology Research Assistant at Qatar University.",
+        description="You are a Microbiology Research Assistant at Cambridge University.",
         instructions=[
             "You will be provided with a topic and search results, from NCBI, PubMed, and other journals.",
             "Carefully read the results and generate an ACADEMIC report, in 1200 words.",
             "Make your academic report with ample statistics.",
             "Your report should follow the format provided below."
-            "Remember: Format all citations and references in IEEE style, using square brackets for in-text citations. ",
+            "Remember: Use IEEE style, ie, using square brackets for in-text citations. ",
         ],
         add_to_system_prompt=dedent("""
         <report_format>
         ## Title (academic language)
 
-        - **Introduction** Introduction and Limitations of the study.
+        - **Introduction** Very brief introduction.
         - **Discussion** Comparison with previous studies and Implications of the findings. 
         - **Statistics** Everything Statistically significant to this question?
+        - **Results** Use figures to present the core findings to the title or querry.
         ### 1:
         - **Detail 1**
         - **Detail 2**
