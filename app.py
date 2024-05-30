@@ -15,8 +15,8 @@ load_dotenv()
 GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 TAVILY_API_KEY = os.getenv('TAVILY_API_KEY')
 
-## app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP]) ##
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], title="Microbiology AI")
+#app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], title="Ristha")
 
 server = app.server
 
@@ -51,21 +51,18 @@ button_style = {
 
 app.layout = dbc.Container([
     dbc.Row([
-        dbc.Col(html.H5("Coded in Python | LLaMA3 70-Billion | Groq | Tavily | Github", 
-                        style={'textAlign': 'center', 'fontSize': '16px', 'color': '#6c757d', 'marginBottom': '10px'}), width=12),
-    ]),
-    dbc.Row([
         dbc.Col(html.H1("Microbiology AI", style=app_title_style), width=12),
     ]),
+
     dbc.Row([
-        dbc.Col(html.H5([
-            "Ristha Kamar - D131",
-            html.Br(),
-            "Biomedical Research Center | Qatar University"
-        ], style=app_subtitle_style), width=12),
-    ]),
-    # Additional rows and components as before...
-], style={'textAlign': 'center'})
+    dbc.Col(html.H5([
+        "Coded in Python | LLaMA3 70-Billion | Groq | Tavily | Github",
+        html.Br(),
+        "Ristha Kamar - D131",
+        html.Br(),
+        "Biomedical Research Center | Qatar University"
+    ], style=app_subtitle_style), width=12),
+]),
 
     dbc.Row([
         dbc.Col(dcc.Markdown(id='report-output', style=app_container_style), width=12),
