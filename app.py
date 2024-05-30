@@ -51,19 +51,21 @@ button_style = {
 
 app.layout = dbc.Container([
     dbc.Row([
+        dbc.Col(html.H5("Coded in Python | LLaMA3 70-Billion | Groq | Tavily | Github", 
+                        style={'textAlign': 'center', 'fontSize': '16px', 'color': '#6c757d', 'marginBottom': '10px'}), width=12),
+    ]),
+    dbc.Row([
         dbc.Col(html.H1("Microbiology AI", style=app_title_style), width=12),
     ]),
-
-
     dbc.Row([
-    dbc.Col(html.H5([
-        "Coded in Python | LLaMA3 70-Billion | Groq | Tavily | Github | Render",
-        html.Br(),
-        "Ristha Kamar - D131",
-        html.Br(),
-        "Biomedical Research Center | Qatar University"
-    ], style=app_subtitle_style), width=12),
-]),
+        dbc.Col(html.H5([
+            "Ristha Kamar - D131",
+            html.Br(),
+            "Biomedical Research Center | Qatar University"
+        ], style=app_subtitle_style), width=12),
+    ]),
+    # Additional rows and components as before...
+], style={'textAlign': 'center'})
 
     dbc.Row([
         dbc.Col(dcc.Markdown(id='report-output', style=app_container_style), width=12),
