@@ -56,7 +56,7 @@ app.layout = dbc.Container([
 
     dbc.Row([
     dbc.Col(html.H5([
-        "Coded in Python | LLaMA3 70-Billion | Groq | Tavily | Github",
+        "Coded in Python | LLaMA3 70-Billion",
         html.Br(),
         "Ristha Kamar - D131",
         html.Br(),
