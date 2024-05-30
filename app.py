@@ -15,7 +15,9 @@ load_dotenv()
 GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 TAVILY_API_KEY = os.getenv('TAVILY_API_KEY')
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+## app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP]) ##
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], title="Microbiology AI")
+
 server = app.server
 
 # Define custom styles
@@ -51,6 +53,18 @@ app.layout = dbc.Container([
     dbc.Row([
         dbc.Col(html.H1("Microbiology AI", style=app_title_style), width=12),
     ]),
+
+
+    dbc.Row([
+    dbc.Col(html.H5([
+        "Coded in Python | LLaMA3 70-Billion | Groq | Tavily | Github | Render",
+        html.Br(),
+        "Ristha Kamar - D131",
+        html.Br(),
+        "Biomedical Research Center | Qatar University"
+    ], style=app_subtitle_style), width=12),
+]),
+
     dbc.Row([
         dbc.Col(html.H5([
             "Python code by Ristha Kamar - D131",
