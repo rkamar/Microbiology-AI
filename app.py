@@ -16,7 +16,7 @@ GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 TAVILY_API_KEY = os.getenv('TAVILY_API_KEY')
 
 #app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], title="AI Microbiology")
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], title="Microbiology AI")
 
 server = app.server
 
