@@ -24,7 +24,7 @@ def get_research_assistant(
         <report_format>
         ## Title (academic language)
 
-        - **Introduction** Very brief introduction.
+        
         - **Discussion** Comparison with previous studies and Implications of the findings. 
         - **Results** Present the core findings to the question.
         - **Statistics** Everything Statistically significant to this question.
